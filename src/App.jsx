@@ -5,7 +5,6 @@ import ShowHide from './Components/ShowHide'
 import ColorChange from './Components/ColorChange'
 import Counter from './Components/Counter'
 import ToDoList from './Components/ToDoList'
-import TodoList from './Components/ToDo'
 
 function App() {
   return (
@@ -15,8 +14,7 @@ function App() {
       <ShowHide/> */}
       {/* <ColorChange/> */}
       {/* <Counter/> */}
-      {/* <ToDoList/> */}
-      <TodoList/>
+      <ToDoList/>
     </div>
   )
 }

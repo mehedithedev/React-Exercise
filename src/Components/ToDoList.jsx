@@ -11,10 +11,17 @@ const [task, setTask]= useState('')
             onChange={(evt)=>setTask(evt.target.value)}
         />
         <button
-
+          onClick={()=>{
+            const newTodoList= [...ToDoList, task]
+            setTodoList(newTodoList)
+          }}
         >+</button>
       </div>
-      <div className='list'></div>
+      <div className='list'>
+        {ToDoList.map((list)=>{
+          return <h1>{list}</h1>
+        })}
+      </div>
     </div>
   )
 }
