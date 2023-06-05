@@ -9,7 +9,11 @@ function ToDoList2() {
     }
 
     const handleClick=()=>{
+        let newToDoList= [...todoList, newTask]
+        setTodoList(newToDoList)
 
+
+        
     }
   return (
     <div>
@@ -20,7 +24,11 @@ function ToDoList2() {
             onClick={handleClick}
         >Add task</button>
         <div className='listItems'>
-            {newTask}
+            {todoList.map((item)=>{
+                return(
+                    <h2>{item}</h2>
+                )
+            })}
         </div>
     </div>
   )

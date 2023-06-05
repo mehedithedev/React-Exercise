@@ -15,8 +15,8 @@ function App() {
       <ShowHide/> */}
       {/* <ColorChange/> */}
       {/* <Counter/> */}
-      {/* <ToDoList/> */}
-      <ToDoList2/>
+      <ToDoList/>
+      {/* <ToDoList2/> */}
     </div>
   )
 }
