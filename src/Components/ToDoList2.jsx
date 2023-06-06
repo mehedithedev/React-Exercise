@@ -4,17 +4,24 @@ function ToDoList2() {
     const [newTask, setNewTask] = useState('')
     const [todoList, setTodoList] = useState([])
 
+  
+
     const handleChange=(evt)=>{
         setNewTask(evt.target.value)
     }
 
     const handleClick=()=>{
-        let newToDoList= [...todoList, newTask]
-        setTodoList(newToDoList)
-
+        const task = {
+            id: todoList.length === 0 ? 1 : todoList[todoList.length-1].id+1,
+            taskName: newTask
+        }
 
         
     }
+  const deleteTask = (itemName) => {
+  const filteredToDo = todoList.filter((item) => item !== itemName)
+  setTodoList(filteredToDo)
+}
   return (
     <div>
         <input
@@ -29,6 +36,7 @@ function ToDoList2() {
                     <diV>
                         <h2>{item}</h2>
                         <button
+                            onClick={()=>deleteTask(item)}
                         >X</button>
                     </diV>
                 )
