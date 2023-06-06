@@ -7,6 +7,7 @@ import Counter from './Components/Counter'
 import ToDoList from './Components/ToDoList'
 import TodoList from './Components/ToDo'
 import ToDoList2 from './Components/ToDoList2'
+import "./Components/TodoList.css"
 
 function App() {
   return (
