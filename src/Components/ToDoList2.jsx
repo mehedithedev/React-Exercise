@@ -26,7 +26,11 @@ function ToDoList2() {
         <div className='listItems'>
             {todoList.map((item)=>{
                 return(
-                    <h2>{item}</h2>
+                    <diV>
+                        <h2>{item}</h2>
+                        <button
+                        >X</button>
+                    </diV>
                 )
             })}
         </div>
