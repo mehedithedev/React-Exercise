@@ -1,60 +1,44 @@
-.listContainer {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-top: 2rem;
+.to-do{
+  text-align: center;
 }
-
-.listContainer input {
-  padding: 0.5rem;
-  font-size: 1.2rem;
+.to-do input{
+  font-size: 2rem;
+  border-radius: 10px;
+  background-color: darkgray;
   border: none;
-  border-radius: 0.5rem;
-  margin-right: 1rem;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
-}
-
-.listContainer button {
-  padding: 0.5rem 1rem;
-  font-size: 1.2rem;
-  border: none;
-  border-radius: 0.5rem;
-  background-color: #61dafb;
-  color: #fff;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
-  cursor: pointer;
-}
-
-.listItems {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-top: 2rem;
-}
-
-.listItems div {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  margin: 3rem;
   padding: 1rem;
-  width: 50%;
-  background-color: #fff;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
-  margin-bottom: 1rem;
 }
-
-.listItems div h2 {
-  font-size: 1.2rem;
-  margin-right: 1rem;
+.to-do input::placeholder{
+  color: black;
+  font-size: 2rem;
+  text-align: center;
+  opacity: 0.8;
 }
-
-.listItems div button {
-  padding: 0.5rem 1rem;
-  font-size: 1.2rem;
+.to-do input:hover{
+  background-color: gray;
+  animation: alternate 0.5s ease-in-out infinite;
+}
+ button{
+  background-color: darkgray;
+  font-size: 2rem;
+  border-radius: 10px;
   border: none;
-  border-radius: 0.5rem;
-  background-color: #ff4136;
-  color: #fff;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
-  cursor: pointer;
+  padding: .5rem 1rem;
+  margin: 1rem;
+  cursor: pointer;  
+}
+button:hover{
+  background-color: gray;
+  animation: alternate 0.5s ease-in-out infinite;
+  transition: all 0.3s ease-in-out;
+}
+.task .complete{
+  color: green;
+ 
+}
+.task h2{
+  font-size: 3rem;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  color: grey;
 }
