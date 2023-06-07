@@ -1,28 +1,30 @@
-const userLeft = true;
-const userWatchingCatMeme = false
+const userLeft = false;
+const userWatchingCatMeme = true
 
-const watchTutorialCallback=((callback, errorCallback)=>{
-    if (userLeft){
-        errorCallback({
-            name: 'User Left', 
-            message: ':('
+const watchTutorialPromises=(()=>{
+    return(
+        new Promise ((resolve, reject)=>{
+            if (userLeft){
+                reject({
+                    name: 'User Left', 
+                    message: ':('
+                })
+            } else if (userWatchingCatMeme){
+                reject({
+                    name: 'User watching Cat Meme ',
+                    message: 'Tutorial< Cat to the user :( '
+                })
+            } else {
+                resolve("That's great you are watching tutorial :)")
+            }
         })
-    } else if (userWatchingCatMeme){
-        errorCallback({
-            name: 'User watching Cat Meme ',
-            message: 'Tutorial< Cat to the user :( '
-        })
-    } else {
-        callback("That's great you are watching tutorial :)")
-    }
+    )
 })
-
-watchTutorialCallback((message)=>{
-    console.log('Sucess: '+ message)
-}, (err)=>{
-    console.log(err.name+ " "+ err.message)
-}
-)
+watchTutorialPromises().then((message)=>{
+    console.log('The promise has been made successfully :)'+message)
+}).catch((err)=>{
+    console.log(`Oh ohh! we got an error ${err}`)
+})
 
 // Explain the above code in a simple manner:
 // 1. We have a function called watchTutorialCallback which takes two parameters: callback and errorCallback
