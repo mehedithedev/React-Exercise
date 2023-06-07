@@ -37,13 +37,21 @@ function ToDoList2() {
   }
 
   return (
-    <div>
-      <input onChange={handleChange} value={newTask} />
+    <div className='to-do'>
+      <input onChange={handleChange} value={newTask} 
+      placeholder='Add a task'
+      />
       <button onClick={handleClick}>Add task</button>
       <div className='listItems'>
        {todoList.map((task) => {
   return (
-    <Task key={task.id} task={task} deleteTask={deleteTask} />
+    <Task 
+    key={task.id} 
+    task={task} 
+    deleteTask={deleteTask}
+    completed= {task.completed}
+    completedTask={completedTask}
+     />
   )
 })}
       </div>
